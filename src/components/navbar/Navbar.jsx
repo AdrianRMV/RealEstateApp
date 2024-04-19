@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './navbar.scss';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [open, setOpen] = useState(false);
@@ -8,14 +9,14 @@ function Navbar() {
     return (
         <nav>
             <div className="left">
-                <a href="/" className="logo">
+                <Link to="/" className="logo">
                     <img src="/logo.png" alt="" />
                     <span>ARV RealEstate</span>
-                </a>
-                <a href="/">Home</a>
-                <a href="/">About</a>
-                <a href="/">Contact</a>
-                <a href="/">Agents</a>
+                </Link>
+                <Link to="/">Home</Link>
+                <Link to="/">About</Link>
+                <Link to="/">Contact</Link>
+                <Link to="/">Agents</Link>
             </div>
             <div className="right">
                 {user ? (
